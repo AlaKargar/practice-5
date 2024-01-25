@@ -40,7 +40,8 @@ def player1():
         print("your choice is Repetitious!")
         print("please enter another numbers: ")
         player1()
-    game[row][col] = "x"
+    else:
+        game[row][col] = "x"
     show()
 
 
@@ -53,8 +54,8 @@ def player2():
         print("your choice is Repetitious!")
         show()
         player2()
-
-    game[row][col] = "0"
+    else:
+        game[row][col] = "0"
     show()
 
 
@@ -65,7 +66,6 @@ while z == False:
     if game[0][0] == "x" and game[0][1] == "x" and game[0][2] == "x":
         print(plyer1+" is win!")
         show()
-
         z = True
     elif game[1][0] == "x" and game[1][1] == "x" and game[1][2] == "x":
         print(plyer1+" is win!")
@@ -97,39 +97,39 @@ while z == False:
         print(plyer1+"is win!")
         show()
         z = True
+    if z == False:
+        player2()
+    # بررسی شرط برنده بودن بازیکن 2
+        if game[0][0] == "0" and game[0][1] == "0" and game[0][2] == "0":
+            print(plyer2+" is win!")
+            show()
+            z = True
+        elif game[1][0] == "0" and game[1][1] == "0" and game[1][2] == "0":
+            print(plyer2+" is win!")
+            show()
+        elif game[2][0] == "0" and game[2][1] == "0" and game[2][2] == "0":
+            print(plyer2+" is win!")
+            show()
+            z = True
 
-    player2()
-   # بررسی شرط برنده بودن بازیکن 2
-    if game[0][0] == "0" and game[0][1] == "0" and game[0][2] == "0":
-        print(plyer2+" is win!")
-        show()
-        z = True
-    elif game[1][0] == "0" and game[1][1] == "0" and game[1][2] == "0":
-        print(plyer2+" is win!")
-        show()
-    elif game[2][0] == "0" and game[2][1] == "0" and game[2][2] == "0":
-        print(plyer2+" is win!")
-        show()
-        z = True
+        elif game[0][0] == "0" and game[1][0] == "0" and game[2][0] == "0":
+            print(plyer2+" is win!")
+            show()
+            z = True
+        elif game[0][1] == "0" and game[1][1] == "0" and game[2][1] == "0":
+            print(plyer2+" is win!")
+            show()
+            z = True
+        elif game[0][2] == "0" and game[1][2] == "0" and game[2][2] == "0":
+            print(plyer2+" is win!")
+            show()
+            z = True
 
-    elif game[0][0] == "0" and game[1][0] == "0" and game[2][0] == "0":
-        print(plyer2+" is win!")
-        show()
-        z = True
-    elif game[0][1] == "0" and game[1][1] == "0" and game[2][1] == "0":
-        print(plyer2+" is win!")
-        show()
-        z = True
-    elif game[0][2] == "0" and game[1][2] == "0" and game[2][2] == "0":
-        print(plyer2+" is win!")
-        show()
-        z = True
-
-    elif game[0][0] == "0" and game[1][1] == "0" and game[2][2] == "0":
-        print(plyer2+" is win!")
-        show()
-        z = True
-    elif game[0][2] == "0" and game[1][1] == "0" and game[2][0] == "0":
-        print(plyer2+" is win!")
-        show()
-        z = True
+        elif game[0][0] == "0" and game[1][1] == "0" and game[2][2] == "0":
+            print(plyer2+" is win!")
+            show()
+            z = True
+        elif game[0][2] == "0" and game[1][1] == "0" and game[2][0] == "0":
+            print(plyer2+" is win!")
+            show()
+            z = True
